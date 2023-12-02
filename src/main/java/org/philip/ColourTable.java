@@ -8,9 +8,6 @@ public class ColourTable {
     private int numAdded;
 
 
-
-
-
     /**
      * The ColourTable function takes in a palette size and creates a ColourTable object.
      *
@@ -43,11 +40,12 @@ public class ColourTable {
                 throw new IllegalArgumentException("Invalid RGB color specified: values must be between 0 and 255");
             }
         }
-        for (int[] color : table) {
-            if (Arrays.equals(color, rgbColour)) {
-                throw new IllegalArgumentException("Color already exists in the ColourTable");
-            }
+
+
+        if (Arrays.stream(table).anyMatch(color -> Arrays.equals(color, rgbColour))) {
+            throw new IllegalArgumentException("Colour already exists in the ColourTable");
         }
+
         if (this.numAdded >= this.paletteSize) {
             throw new IllegalStateException("ColourTable is full");
         } else {
