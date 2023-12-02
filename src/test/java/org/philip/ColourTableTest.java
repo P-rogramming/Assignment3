@@ -82,6 +82,20 @@ class ColourTableTest {
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
+    /**
+     * The testAddDuplicateRGBColor function tests the add function of the ColourTable class.
+     * It checks that an IllegalArgumentException is thrown when a duplicate colour is added to the table.
+     *
+     *
+     */
+    @Test
+    void testAddDuplicateRGBColor() {
+        ColourTable testTable = new ColourTable(4);
+        int[] colour = {200, 100, 10};
+        testTable.add(colour);
+        assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
+    }
+
 
 
 
