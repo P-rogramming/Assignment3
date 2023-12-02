@@ -26,15 +26,16 @@ public class ColourTable {
 
     }
 
-    public void add(int[] rgbColour){
-
-        if (this.numAdded >= this.paletteSize){
-            throw new IllegalStateException("ColourTable is full");
-        }else{
-            this.table[numAdded] = rgbColour;
-            this.numAdded += 1;
+    public void add(int[] rgbColour) {
+        if (rgbColour.length != 3) {
+            throw new IllegalArgumentException("Invalid RGB color specified: must have exactly 3 elements");
         }
-
+        if (this.numAdded >= this.paletteSize) {
+            throw new IllegalStateException("ColourTable is full");
+        } else {
+            this.table[numAdded] = rgbColour;
+            this.numAdded++;
+        }
     }
 
     public int[][] getTable() {
