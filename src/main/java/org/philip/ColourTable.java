@@ -30,6 +30,11 @@ public class ColourTable {
         if (rgbColour.length != 3) {
             throw new IllegalArgumentException("Invalid RGB color specified: must have exactly 3 elements");
         }
+        for (int value : rgbColour) {
+            if (value < 0 || value > 255) {
+                throw new IllegalArgumentException("Invalid RGB color specified: values must be between 0 and 255");
+            }
+        }
         if (this.numAdded >= this.paletteSize) {
             throw new IllegalStateException("ColourTable is full");
         } else {
