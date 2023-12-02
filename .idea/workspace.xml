@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6acfe260-cf10-47f2-ac01-3cb1ea1440ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="6acfe260-cf10-47f2-ac01-3cb1ea1440ab" name="Changes" comment="Added JUnit dependency to pom.xml.">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/philip/ColourTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/philip/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/org/philip/ColourTableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +89,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701518327127</updated>
-      <workItem from="1701518328328" duration="1340000" />
+      <workItem from="1701518328328" duration="1604000" />
     </task>
+    <task id="LOCAL-00001" summary="Added JUnit dependency to pom.xml.">
+      <option name="closed" value="true" />
+      <created>1701519812223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701519812223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +115,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added JUnit dependency to pom.xml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JUnit dependency to pom.xml." />
   </component>
 </project>
