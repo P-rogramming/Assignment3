@@ -1,6 +1,13 @@
 package org.philip;
 
 public class ColourTable {
+    private int[][] table;
+    private int paletteSize;
+    private int numAdded;
+
+
+
+
 
     /**
      * The ColourTable function takes in a palette size and creates a ColourTable object.
@@ -13,7 +20,25 @@ public class ColourTable {
         if(paletteSize <= 1 || paletteSize > 1025 || ((paletteSize & (paletteSize - 1)) != 0)){
             throw new IllegalArgumentException("Invalid palette size specified");
         }
+        this.paletteSize = paletteSize;
+        this.table = new int[paletteSize][3];
+        this.numAdded = 0;
 
+    }
+
+    public void add(int[] rgbColour){
+
+        if (this.numAdded >= this.paletteSize){
+            throw new IllegalStateException("ColourTable is full");
+        }else{
+            this.table[numAdded] = rgbColour;
+            this.numAdded += 1;
+        }
+
+    }
+
+    public int[][] getTable() {
+        return this.table;
     }
 
 }

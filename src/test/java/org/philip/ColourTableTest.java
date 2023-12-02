@@ -16,5 +16,22 @@ class ColourTableTest {
         assertThrows(IllegalArgumentException.class, () -> new ColourTable(5));
     }
 
+    /**
+     * The testAdd24BitRGBColour function tests the add function with a 24 bit RGB colour.
+     * The test passes if the method adds the colour to the ColourTable .
+     *
+     */
+    @Test
+    void testAdd24BitRGBColour() {
+        ColourTable testTable = new ColourTable(4);
+        int[] colour = {200, 100, 10};
+        testTable.add(colour);
+        int[][] expectedTable = {{200, 100, 10}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+        assertArrayEquals(expectedTable, testTable.getTable());
+    }
+
+
+
+
 
 }
