@@ -107,6 +107,12 @@ class ColourTableTest {
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
+    /**
+     * The testShowTableWithEmptyTable function tests the showTable function of the ColourTable class.
+     * It creates a new ColourTable object with 16 colours and then checks that it prints out an empty table.
+     *
+     *
+     */
     @Test
     public void testShowTableWithEmptyTable() {
         ColourTable colourTable = new ColourTable(16);
@@ -115,6 +121,13 @@ class ColourTableTest {
         assertEquals(expectedOutput, colourTable.showTable());
     }
 
+    /**
+     * The testShowTableWithNonEmptyTable function tests the showTable function of the ColourTable class.
+     * It creates a new colour table with 16 slots, and adds 3 colours to it.
+     * Then it checks that when we call showTable on this colour table, we get back a string containing all three colours in order.
+     *
+     *
+     */
     @Test
     public void testShowTableWithNonEmptyTable() {
         ColourTable colourTable = new ColourTable(16);
