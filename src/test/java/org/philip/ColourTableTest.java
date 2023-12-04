@@ -16,6 +16,17 @@ class ColourTableTest {
         assertThrows(IllegalArgumentException.class, () -> new ColourTable(5));
     }
 
+    /**
+     * The testConstructor function tests the ColourTable constructor with a valid palette size.
+     * The test passes if the constructor creates an empty int array.
+     *
+     */
+    @Test
+    void testConstructorWithValidPaletteSize() {
+        ColourTable testTable = new ColourTable(4);
+        int[][] expectedTable = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+        assertArrayEquals(expectedTable, testTable.getTable());
+    }
 
 
     /**
@@ -95,16 +106,6 @@ class ColourTableTest {
         testTable.add(colour);
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6acfe260-cf10-47f2-ac01-3cb1ea1440ab" name="Changes" comment="Added JUnit dependency to pom.xml.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/philip/ColourTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/philip/ColourTableTest.java" afterDir="false" />
+    <list default="true" id="6acfe260-cf10-47f2-ac01-3cb1ea1440ab" name="Changes" comment="Refactored add() method to make more readable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/philip/ColourTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/philip/ColourTableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -42,7 +46,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Testing",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,8 +62,8 @@
       <recent name="org.philip" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ColourTableTest.testConstructorWithInvalidPaletteSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ColourTableTest.testConstructorWithValidPaletteSize">
+    <configuration name="ColourTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment3Java" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +73,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.philip" />
       <option name="MAIN_CLASS_NAME" value="org.philip.ColourTableTest" />
-      <option name="METHOD_NAME" value="testConstructorWithInvalidPaletteSize" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColourTableTest.testAddDuplicateRGBColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment3Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.philip.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.philip" />
+      <option name="MAIN_CLASS_NAME" value="org.philip.ColourTableTest" />
+      <option name="METHOD_NAME" value="testAddDuplicateRGBColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColourTableTest.testAddInvalidRGBColorWithNegativeValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment3Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.philip.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.philip" />
+      <option name="MAIN_CLASS_NAME" value="org.philip.ColourTableTest" />
+      <option name="METHOD_NAME" value="testAddInvalidRGBColorWithNegativeValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColourTableTest.testAddInvalidRGBColorWithOutOfRangeValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment3Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.philip.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.philip" />
+      <option name="MAIN_CLASS_NAME" value="org.philip.ColourTableTest" />
+      <option name="METHOD_NAME" value="testAddInvalidRGBColorWithOutOfRangeValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColourTableTest.testConstructorWithValidPaletteSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment3Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.philip.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.philip" />
+      <option name="MAIN_CLASS_NAME" value="org.philip.ColourTableTest" />
+      <option name="METHOD_NAME" value="testConstructorWithValidPaletteSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,7 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ColourTableTest.testConstructorWithInvalidPaletteSize" />
+        <item itemvalue="JUnit.ColourTableTest.testConstructorWithValidPaletteSize" />
+        <item itemvalue="JUnit.ColourTableTest.testAddDuplicateRGBColor" />
+        <item itemvalue="JUnit.ColourTableTest" />
+        <item itemvalue="JUnit.ColourTableTest.testAddInvalidRGBColorWithOutOfRangeValues" />
+        <item itemvalue="JUnit.ColourTableTest.testAddInvalidRGBColorWithNegativeValues" />
       </list>
     </recent_temporary>
   </component>
@@ -89,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701518327127</updated>
-      <workItem from="1701518328328" duration="1604000" />
+      <workItem from="1701518328328" duration="7732000" />
     </task>
     <task id="LOCAL-00001" summary="Added JUnit dependency to pom.xml.">
       <option name="closed" value="true" />
@@ -99,7 +170,55 @@
       <option name="project" value="LOCAL" />
       <updated>1701519812223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added test to ColourTableTest.java with invalid palette size passed to the constructor and then implemented the necessary code to pass the test in ColourTable.java.">
+      <option name="closed" value="true" />
+      <created>1701520031123</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701520031123</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added testAdd24BitRGBColour() to ColourTableTest.java and then implemented the necessary code to pass the test in ColourTable.java.">
+      <option name="closed" value="true" />
+      <created>1701523473794</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701523473794</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added testAddInvalid24BitRGBColour() to ColourTableTest.java to test the add method on an invalid RGB colour length and then implemented the necessary code to pass the test in ColourTable.java.">
+      <option name="closed" value="true" />
+      <created>1701524342565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701524342565</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added more tests for invalid RGB values to ColourTableTest.java to test the add method on RGB colour lengths too large and small, as well as negative values and out of range values. I then implemented the necessary code to pass these tests in ColourTable.java.">
+      <option name="closed" value="true" />
+      <created>1701524875691</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701524875691</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added test for duplicate colours in table. I have decided in my code we do not allow duplicate colours. I then implemented the necessary fix in ColourTable.java to pass the test">
+      <option name="closed" value="true" />
+      <created>1701525466930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701525466930</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactored add() method to make more readable">
+      <option name="closed" value="true" />
+      <created>1701526011234</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701526011234</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -118,6 +249,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added JUnit dependency to pom.xml." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JUnit dependency to pom.xml." />
+    <MESSAGE value="Added test to ColourTableTest.java with invalid palette size passed to the constructor and then implemented the necessary code to pass the test in ColourTable.java." />
+    <MESSAGE value="Added testAdd24BitRGBColour() to ColourTableTest.java and then implemented the necessary code to pass the test in ColourTable.java." />
+    <MESSAGE value="Added testAddInvalid24BitRGBColour() to ColourTableTest.java to test the add method on an invalid RGB colour length and then implemented the necessary code to pass the test in ColourTable.java." />
+    <MESSAGE value="Added more tests for invalid RGB values to ColourTableTest.java to test the add method on RGB colour lengths too large and small, as well as negative values and out of range values. I then implemented the necessary code to pass these tests in ColourTable.java." />
+    <MESSAGE value="Added test for duplicate colours in table. I have decided in my code we do not allow duplicate colours. I then implemented the necessary fix in ColourTable.java to pass the test" />
+    <MESSAGE value="Refactored add() method to make more readable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored add() method to make more readable" />
   </component>
 </project>
