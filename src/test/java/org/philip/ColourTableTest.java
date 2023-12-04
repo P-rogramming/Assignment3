@@ -107,6 +107,31 @@ class ColourTableTest {
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
+    @Test
+    public void testShowTableWithEmptyTable() {
+        ColourTable colourTable = new ColourTable(16);
+
+        String expectedOutput = "Colour Table:\n";
+        assertEquals(expectedOutput, colourTable.showTable());
+    }
+
+    @Test
+    public void testShowTableWithNonEmptyTable() {
+        ColourTable colourTable = new ColourTable(16);
+        colourTable.add(new int[]{255, 0, 0});
+        colourTable.add(new int[]{0, 255, 0});
+        colourTable.add(new int[]{0, 0, 255});
+
+        String expectedOutput = "Colour Table:\n" +
+                "RGB: 255, 0, 0\n" +
+                "RGB: 0, 255, 0\n" +
+                "RGB: 0, 0, 255\n";
+        assertEquals(expectedOutput, colourTable.showTable());
+    }
+
+
+
+
 
 
 }
