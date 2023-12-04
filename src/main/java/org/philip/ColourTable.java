@@ -63,4 +63,16 @@ public class ColourTable {
         return this.table;
     }
 
+    /**
+     * The showTable function displays the current contents of the ColourTable.
+     */
+    public String showTable() {
+        StringBuilder output = new StringBuilder();
+        output.append("Colour Table:\n");
+        for (int i = 0; i < numAdded; i++) {
+            int[] color = table[i];
+            output.append("RGB: ").append(color[0]).append(", ").append(color[1]).append(", ").append(color[2]).append("\n");
+        }
+        return output.toString();
+    }
 }
