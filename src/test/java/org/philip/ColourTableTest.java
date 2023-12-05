@@ -44,63 +44,63 @@ class ColourTableTest {
     }
 
     /**
-     * The testAddInvalidRGBColorWithLessThanThreeElements function tests the add function of the ColourTable class.
+     * The testAddInvalidRGBColourWithLessThanThreeElements function tests the add function of the ColourTable class.
      * It checks that an IllegalArgumentException is thrown when a colour with less than three elements is added to the table.
      *
      */
     @Test
-    void testAddInvalidRGBColorWithLessThanThreeElements() {
+    void testAddInvalidRGBColourWithLessThanThreeElements() {
         ColourTable testTable = new ColourTable(4);
         int[] colour = {200, 100};
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
     /**
-     * The testAddInvalidRGBColorWithMoreThanThreeElements function tests the add function of the ColourTable class.
+     * The testAddInvalidRGBColourWithMoreThanThreeElements function tests the add function of the ColourTable class.
      * It checks that an IllegalArgumentException is thrown when a colour with more than three elements is added to the table.
      *
      */
     @Test
-    void testAddInvalidRGBColorWithMoreThanThreeElements() {
+    void testAddInvalidRGBColourWithMoreThanThreeElements() {
         ColourTable testTable = new ColourTable(4);
         int[] colour = {200, 100, 10, 3};
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
     /**
-     * The testAddInvalidRGBColorWithNegativeValues function tests the add function of the ColourTable class.
+     * The testAddInvalidRGBColourWithNegativeValues function tests the add function of the ColourTable class.
      * It creates a new ColourTable object with 4 buckets, and then attempts to add an RGB colour array with negative values.
      * This should throw an IllegalArgumentException, which is caught by assertThrows().
      *
      */
     @Test
-    void testAddInvalidRGBColorWithNegativeValues() {
+    void testAddInvalidRGBColourWithNegativeValues() {
         ColourTable testTable = new ColourTable(4);
         int[] colour = {200, -100, 10};
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
     /**
-     * The testAddInvalidRGBColorWithOutOfRangeValues function tests the add function of the ColourTable class.
+     * The testAddInvalidRGBColourWithOutOfRangeValues function tests the add function of the ColourTable class.
      * It checks that an IllegalArgumentException is thrown when a colour with out-of-range values is added to the table.
      *
      *
      */
     @Test
-    void testAddInvalidRGBColorWithOutOfRangeValues() {
+    void testAddInvalidRGBColourWithOutOfRangeValues() {
         ColourTable testTable = new ColourTable(4);
         int[] colour = {300, 100, 10};
         assertThrows(IllegalArgumentException.class, () -> testTable.add(colour));
     }
 
     /**
-     * The testAddDuplicateRGBColor function tests the add function of the ColourTable class.
+     * The testAddDuplicateRGBColour function tests the add function of the ColourTable class.
      * It checks that an IllegalArgumentException is thrown when a duplicate colour is added to the table.
      *
      *
      */
     @Test
-    void testAddDuplicateRGBColor() {
+    void testAddDuplicateRGBColour() {
         ColourTable testTable = new ColourTable(4);
         int[] colour = {200, 100, 10};
         testTable.add(colour);
