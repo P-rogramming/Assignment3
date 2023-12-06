@@ -135,10 +135,12 @@ class ColourTableTest {
         colourTable.add(new int[]{0, 255, 0});
         colourTable.add(new int[]{0, 0, 255});
 
-        String expectedOutput = "Colour Table:\n" +
-                "RGB: 255, 0, 0\n" +
-                "RGB: 0, 255, 0\n" +
-                "RGB: 0, 0, 255\n";
+        String expectedOutput = """
+                Colour Table:
+                RGB: 255, 0, 0
+                RGB: 0, 255, 0
+                RGB: 0, 0, 255
+                """;
         assertEquals(expectedOutput, colourTable.showTable());
     }
 
